@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIP MINES</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+  		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+
+		html, body {
+			overflow: hidden;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #0b121d;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: white;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		h1,h2,h3,a,button {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		.container {
+			padding: 60px 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			max-width: calc(50vw - 40px);
+			max-height: calc(50vh - 40px);
+            margin-top: 80px;
+		}
+
+		.imgs {
+			height: 65px;
+			width: 67px;
+			margin: 5px;
+		}
+
+		.a {
+			background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687316574318614/image.png');
+			background-size: cover;
+		}
+
+		.b {
+			background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687792497803425/image.png');
+			background-size: cover;
+		}
+
+		.btnGerar {
+			margin-top: 30px;
+			color: rgb(0, 0, 0);
+			background-color: #2a80e5;
+			border: none;
+			border-radius: 20px;
+			padding: 10px 60px;
+			font-size: 14px;
+			cursor: pointer;
+			font-weight: 600;
+			width: 50%;
+		}
+
+		.btnCads {
+			margin-top: 30px;
+			color: rgb(0, 0, 0);
+			background-color: #ffffff;
+			border: none;
+			border-radius: 20px;
+			padding: 10px 20px;
+			font-size: 14px;
+			cursor: pointer;
+			margin-right: 10px;
+			font-weight: 600;
+			width: 50%;
+		}
+
+
+		.buttons {
+			display: flex;
+    		margin-top: -60px;
+		}
+
+		span{
+			font-size: 25px;
+			font-weight: bold;
+			margin-left: 50px;
+		}
+
+		.desc {
+			display: flex;
+		}
+
+		.desc-50 {
+			background-color: #fff;
+			padding: 8px 30px;
+			border-radius: 10px;
+			color: #000;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-weight: 600;
+			font-size: 16px;
+			margin-right: 8px;
+			width: 50%;
+			text-align: center;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+			}
+
+		.spinner {
+			border: 3px solid rgba(0, 0, 0, 0.1);
+			border-top-color: #3498db;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			animation: spin 2s linear infinite;
+			opacity: 0.7;
+			display: none;
+			}
+
+		.logo {
+			width: 800px;
+			margin-top: -100px;
+			margin-bottom: 50px;
+		}
+
+		.ballow {
+			margin-top: 50px;
+		}
+
+
+
+		@media screen and (max-width: 768px) {
+
+		.a {
+				background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687316574318614/image.png');
+				background-size: cover;
+				width: 50px;
+				height: 50px;
+			}
+
+			.b {
+				background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687792497803425/image.png');
+				background-size: cover;
+				width: 50px;
+				height: 50px;
+			}
+
+			span{
+				font-size: 20px;
+				font-weight: bold;
+				margin-left: 30px;
+				margin-bottom: 0px;
+			}
+
+			.container {
+				padding: 60px 60px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+				max-width: calc(50vw - 40px);
+				max-height: calc(50vh - 40px);
+			}
+
+			.btnGerar {
+				margin-top: 30px;
+				color: rgb(0, 0, 0);
+				background-color: #2a80e5;
+				border: none;
+				border-radius: 20px;
+				padding: 10px 58px;
+				font-size: 12px;
+				cursor: pointer;
+				font-weight: 600;
+				width: 50%;
+				margin-bottom: 5px;
+			}
+
+			.btnCads {
+				margin-top: 30px;
+				color: rgb(0, 0, 0);
+				background-color: #ffffff;
+				border: none;
+				border-radius: 20px;
+				padding: 10px 18px;
+				font-size: 12px;
+				cursor: pointer;
+				margin-right: 10px;
+				font-weight: 600;
+				width: 50%;
+				margin-bottom: 5px;
+			}
+
+			.desc {
+				margin-bottom: 5px;
+			}
+
+			.desc-50 {
+				background-color: #fff;
+				padding: 6px 20px;
+				border-radius: 10px;
+				color: #000;
+				font-weight: 600;
+				font-size: 12px;
+				margin-right: 8px;
+				width: 50%;
+				text-align: center;
+			}
+
+			.logo {
+				width: 600px;
+    			margin-top: -120px;
+    			margin-bottom: 0px;
+			}
+
+			.ballow {
+				margin-top: 45px;
+    			margin-bottom: 0px;
+			}
+		}
+
+		@media screen and (max-width: 360px) {
+
+			.a {
+					background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687316574318614/image.png');
+					background-size: cover;
+					width: 41px;
+					height: 40px;
+				}
+
+			.b {
+				background-image: url('https://media.discordapp.net/attachments/854436361648865280/1103687792497803425/image.png');
+				background-size: cover;
+				width: 41px;
+				height: 40px;
+			}
+
+			span{
+				font-size: 20px;
+				font-weight: bold;
+				margin-left: 30px;
+				margin-bottom: 0px;
+			}
+
+			.container {
+				padding: 60px 60px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+				max-width: calc(50vw - 40px);
+				max-height: calc(50vh - 40px);
+			}
+
+			.btnGerar {
+				margin-top: 30px;
+				color: rgb(0, 0, 0);
+				background-color: #2a80e5;
+				border: none;
+				border-radius: 20px;
+				padding: 10px 58px;
+				font-size: 12px;
+				cursor: pointer;
+				font-weight: 600;
+				width: 50%;
+				margin-bottom: 5px;
+			}
+
+			.btnCads {
+				margin-top: 30px;
+				color: rgb(0, 0, 0);
+				background-color: #ffffff;
+				border: none;
+				border-radius: 20px;
+				padding: 10px 18px;
+				font-size: 12px;
+				cursor: pointer;
+				margin-right: 10px;
+				font-weight: 600;
+				width: 50%;
+				margin-bottom: 5px;
+			}
+
+			.desc {
+				margin-bottom: 5px;
+			}
+
+			.desc-50 {
+				background-color: #fff;
+				padding: 6px 20px;
+				border-radius: 10px;
+				color: #000;
+				font-weight: 600;
+				font-size: 12px;
+				margin-right: 8px;
+				width: 50%;
+				text-align: center;
+			}
+
+			.logo {
+				width: 500px;
+				margin-top: -120px;
+				margin-bottom: 0px;
+			}
+
+			.ballow {
+				margin-top: 20px;
+				margin-bottom: 0px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="description" id="desc" style="display: none;">
+        <div class="ballow">
+			<span>🎯 HACK GERADO 🎯</span>
+            <div class="desc">
+                <div class="desc-50">
+                    <h5>Selecionar 3 Minas</h5>
+                </div>
+				<div class="desc-50">
+                    <h5>3 Tentativas</h5>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<div class="container">
+		<img class="logo" src="./src/logo.png" alt="img">
+		<div id="hack"></div>
+		<div id="spinner" class="spinner"></div>
+	</div>
+	
+
+	<div class="buttons">
+		
+		<button class="btnCads" id="btn-red"><a target="_blank" href="https://www.flames.bet/c-iQ68FaNu?lang=pt">Jogue agora!</a></button>
+		<button class="btnGerar" id="gerarHackButton">Gerar Hack</button>
+	</div>
+
+
+	<script>
+		const _0x388139=_0xe154;(function(_0x3bef87,_0x30566a){const _0x371bfc=_0xe154,_0x26c505=_0x3bef87();while(!![]){try{const _0x2b7956=-parseInt(_0x371bfc(0x1eb))/0x1*(parseInt(_0x371bfc(0x1dd))/0x2)+parseInt(_0x371bfc(0x1e8))/0x3*(parseInt(_0x371bfc(0x1d8))/0x4)+parseInt(_0x371bfc(0x1e2))/0x5*(-parseInt(_0x371bfc(0x1e0))/0x6)+-parseInt(_0x371bfc(0x1df))/0x7+-parseInt(_0x371bfc(0x1e6))/0x8+-parseInt(_0x371bfc(0x1d3))/0x9+parseInt(_0x371bfc(0x1e4))/0xa*(parseInt(_0x371bfc(0x1d5))/0xb);if(_0x2b7956===_0x30566a)break;else _0x26c505['push'](_0x26c505['shift']());}catch(_0x1f1a6d){_0x26c505['push'](_0x26c505['shift']());}}}(_0x11bf,0x92a5d));function gerarHack(){const _0x5e7604=_0xe154;let _0x4ebb8c=document['getElementById'](_0x5e7604(0x1e9)),_0x44835c=document[_0x5e7604(0x1d6)]('desc'),_0x3810a6=document[_0x5e7604(0x1d6)]('gerarHackButton'),_0x463aed=document[_0x5e7604(0x1d6)]('btn-red'),_0x152b94=document['getElementById']('spinner');if(_0x3810a6[_0x5e7604(0x1de)])return;_0x3810a6[_0x5e7604(0x1de)]=!![],_0x44835c[_0x5e7604(0x1f0)]['display']='none',_0x4ebb8c['innerHTML']='',_0x152b94['style'][_0x5e7604(0x1f2)]=_0x5e7604(0x1f5),_0x3810a6[_0x5e7604(0x1f0)][_0x5e7604(0x1f2)]='none',_0x463aed['style'][_0x5e7604(0x1f2)]='none';let _0x2d8a39=getRandomIndexes();setTimeout(function(){const _0x22caf7=_0x5e7604;_0x152b94[_0x22caf7(0x1f0)][_0x22caf7(0x1f2)]=_0x22caf7(0x1e5),_0x4ebb8c[_0x22caf7(0x1db)]='';for(let _0x1ee64d=0x0;_0x1ee64d<0x5;_0x1ee64d++){let _0x261575=document[_0x22caf7(0x1ec)](_0x22caf7(0x1d7));_0x261575[_0x22caf7(0x1f0)][_0x22caf7(0x1f2)]=_0x22caf7(0x1f4);for(let _0x15ed4b=0x0;_0x15ed4b<0x5;_0x15ed4b++){let _0x5acfe3=document[_0x22caf7(0x1ec)](_0x22caf7(0x1d7));_0x5acfe3['className']=_0x22caf7(0x1ed),_0x2d8a39[_0x22caf7(0x1f6)](_0x1ee64d*0x5+_0x15ed4b)?_0x5acfe3[_0x22caf7(0x1f1)][_0x22caf7(0x1da)]('a'):_0x5acfe3[_0x22caf7(0x1f1)][_0x22caf7(0x1da)]('b'),_0x261575[_0x22caf7(0x1e3)](_0x5acfe3);}_0x4ebb8c[_0x22caf7(0x1e3)](_0x261575);}setTimeout(function(){const _0x377949=_0x22caf7;_0x44835c[_0x377949(0x1f0)][_0x377949(0x1f2)]=_0x377949(0x1f5),_0x3810a6[_0x377949(0x1f0)]['display']=_0x377949(0x1f5),_0x463aed['style']['display']='block';},0x3e8);},0x3e8);let _0x2aecec=0x3c,_0x37b1e2=setInterval(function(){const _0x460ebe=_0x5e7604;_0x3810a6[_0x460ebe(0x1db)]=_0x2aecec+'\x20segundos...',_0x2aecec--;if(_0x2aecec<0x0)clearInterval(_0x37b1e2),_0x3810a6[_0x460ebe(0x1db)]='Gerar\x20Hack',_0x3810a6[_0x460ebe(0x1de)]=![];else _0x2aecec===0x0&&(_0x3810a6[_0x460ebe(0x1de)]=!![]);},0x3e8);}function getRandomIndexes(){const _0x3b5bfc=_0xe154;let _0xf2ccde=[];while(_0xf2ccde[_0x3b5bfc(0x1ef)]<0x4){let _0x2e62e5=Math[_0x3b5bfc(0x1e1)](Math[_0x3b5bfc(0x1ee)]()*0x19);!_0xf2ccde['includes'](_0x2e62e5)&&_0xf2ccde['push'](_0x2e62e5);}return _0xf2ccde;}function _0xe154(_0x928043,_0x4c4380){const _0x11bf06=_0x11bf();return _0xe154=function(_0xe1542a,_0x5b67fe){_0xe1542a=_0xe1542a-0x1d3;let _0x4de14d=_0x11bf06[_0xe1542a];return _0x4de14d;},_0xe154(_0x928043,_0x4c4380);}function gerarTabuleiroB(){const _0xcd418f=_0xe154;let _0x260594=document[_0xcd418f(0x1d6)]('hack');_0x260594[_0xcd418f(0x1db)]='';for(let _0x376526=0x0;_0x376526<0x5;_0x376526++){let _0x1e51bd=document[_0xcd418f(0x1ec)]('div');_0x1e51bd['style']['display']='flex';for(let _0x1a9733=0x0;_0x1a9733<0x5;_0x1a9733++){let _0x5de3c3=document[_0xcd418f(0x1ec)](_0xcd418f(0x1d7));_0x5de3c3[_0xcd418f(0x1d4)]=_0xcd418f(0x1ea),_0x1e51bd[_0xcd418f(0x1e3)](_0x5de3c3);}_0x260594[_0xcd418f(0x1e3)](_0x1e51bd);}}window[_0x388139(0x1dc)](_0x388139(0x1f3),function(){gerarTabuleiroB();}),document[_0x388139(0x1d6)](_0x388139(0x1e7))['addEventListener'](_0x388139(0x1d9),function(){gerarHack();});function _0x11bf(){const _0xf6f7f0=['hack','imgs\x20b','53842VzvLUS','createElement','imgs','random','length','style','classList','display','load','flex','block','includes','1226718cGEILi','className','63316lsjcEM','getElementById','div','270604tZGEiw','click','add','innerHTML','addEventListener','4Galdlw','disabled','199185ayJDPk','5880fRzdxM','floor','3820YedJRC','appendChild','2690uoGqEW','none','4283144pfCXEz','gerarHackButton','27JjbOyT'];_0x11bf=function(){return _0xf6f7f0;};return _0x11bf();}
+	  </script>
+		
+</body>
+</html>
